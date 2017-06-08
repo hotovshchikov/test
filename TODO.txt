@@ -1,4 +1,2 @@
 - svg sprite store
-- index page
 - router
-- ...

@@ -1,5 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app/App.js';
+import { AppContainer } from 'react-hot-loader';
 
-ReactDOM.render(<App title="Add a link"/>, document.getElementById('root'));
+import RootContainer from './components/rootContainer/rootContainer';
+
+const render = Component => {
+    ReactDOM.render(
+        <AppContainer>
+            <Component />
+        </AppContainer>,
+        document.getElementById('app-root')
+    );
+};
+
+render(RootContainer);
+
+module.hot ? module.hot.accept('./components/rootContainer/rootContainer', () => { render(RootContainer); }) : void 0;

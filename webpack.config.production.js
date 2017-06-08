@@ -10,12 +10,7 @@ const {resolve} = require('path'),
 module.exports = {
     context: SRC_DIR,
     entry: {
-        app: [
-            'react-hot-loader/patch',
-            'webpack-dev-server/client?http://localhost:9000',
-            'webpack/hot/only-dev-server',
-            './js/index.js'
-        ],
+        app: './js/index.js',
         vendor: ['lodash']
     },
     output: {
@@ -33,7 +28,6 @@ module.exports = {
                         loader: 'babel-loader',
                         options: {
                             presets: [['es2015', {modules: false}], 'react'],
-                            plugins: ['react-hot-loader/babel']
                         }
                     }
                 ]
@@ -41,14 +35,14 @@ module.exports = {
             {
                 test: /\.scss$/,
                 include: SRC_DIR,
-                use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+                use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
                         {loader: 'css-loader', options: {sourceMap: true}},
                         {loader: 'postcss-loader', options: {sourceMap: true}},
                         {loader: 'sass-loader', options: {sourceMap: true}}
                     ]
-                })),
+                })
             },
             {
                 test: /\.(jpe?g|png|gif)$/i,
@@ -108,7 +102,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.scss'],
+        extensions: ['.js', '.json', '.jsx', '.scss'],
         modules: [SRC_DIR, NODE_MODULES],
     },
     plugins: [
@@ -138,20 +132,11 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor'
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            minimize: true,
+            comments: false
+        })
     ],
-    devtool: 'cheap-module-eval-source-map',
-    devServer: {
-        contentBase: BUILD_DIR,
-        publicPath: '/',
-        hot: true,
-        open: true,
-        compress: true,
-        port: 9000,
-        historyApiFallback: true,
-        stats: 'errors-only',
-        clientLogLevel: 'error'
-    }
+    devtool: 'source-map'
 };
