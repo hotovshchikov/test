@@ -10,7 +10,7 @@ const {resolve} = require('path'),
 module.exports = {
     context: SRC_DIR,
     entry: {
-        app: './js/index.js',
+        app: './index.js',
         vendor: ['lodash']
     },
     output: {

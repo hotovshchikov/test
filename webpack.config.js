@@ -14,7 +14,7 @@ module.exports = {
             'react-hot-loader/patch',
             'webpack-dev-server/client?http://localhost:9000',
             'webpack/hot/only-dev-server',
-            './js/index.js'
+            './index.js'
         ],
         vendor: ['lodash']
     },

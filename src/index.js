@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-import RootContainer from './components/rootContainer/rootContainer';
+import RootContainer from './components/rootContainer';
 
 const render = Component => {
     ReactDOM.render(
@@ -15,4 +15,4 @@ const render = Component => {
 
 render(RootContainer);
 
-module.hot ? module.hot.accept('./components/rootContainer/rootContainer', () => { render(RootContainer); }) : void 0;
+module.hot ? module.hot.accept('./components/rootContainer', () => { render(RootContainer); }) : void 0;
