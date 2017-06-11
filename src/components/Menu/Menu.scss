@@ -8,11 +8,12 @@
             margin-right: 0;
         }
     }
+
     &__link {
         display: block;
         padding: 0.5rem 1rem;
         border: 1px solid #ccc;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-decoration: none;
         text-transform: uppercase;
         color: #333;
@@ -21,4 +22,4 @@
             text-decoration: underline;
         }
     }
-}
+}  
