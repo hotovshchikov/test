@@ -1,5 +1,5 @@
 import React from 'react';
-import Message from './message/Message';
+import Message from './Message/Message';
 
 export default class Chat extends React.Component {
     constructor() {
