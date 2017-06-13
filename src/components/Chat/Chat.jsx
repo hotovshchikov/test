@@ -8,11 +8,11 @@ export default class Chat extends React.Component {
 
     render() {
         return (
-      <div>
-          <h1>Chat</h1>
-          <Message data={'I\'m a chat message 1'}/>
-          <Message data={'I\'m a chat message 2'}/>
-      </div>
+            <div>
+                <h1>Chat</h1>
+                <Message data={'I\'m a chat message 1'}/>
+                <Message data={'I\'m a chat message 2'}/>
+            </div>
         );
     }
 }
