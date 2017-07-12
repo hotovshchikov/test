@@ -9,22 +9,22 @@ import Table from './Table/Table';
 import Backlog from './Backlog/Backlog';
 
 export default class RootContainer extends React.Component {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    render() {
-        return (
-            <Router history="">
-                <div>
-                    <Menu />
-                    <Route exact path='/' component={Project} />
-                    <Route path='/calendar' component={Calendar} />
-                    <Route path='/chat' component={Chat} />
-                    <Route path='/table' component={Table} />
-                    <Route path='/backlog' component={Backlog} />
-                </div>
-            </Router>
-        );
-    }
+  render() {
+    return (
+      <Router history="">
+        <div>
+          <Menu />
+          <Route exact path="/" component={Project} />
+          <Route path="/calendar" component={Calendar} />
+          <Route path="/chat" component={Chat} />
+          <Route path="/table" component={Table} />
+          <Route path="/backlog" component={Backlog} />
+        </div>
+      </Router>
+    );
+  }
 }
