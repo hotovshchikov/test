@@ -1,11 +1,12 @@
-const { resolve } = require('path'),
-  webpack = require('webpack'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin'),
-  HtmlWebpackPlugin = require('html-webpack-plugin'),
-  CleanWebpackPlugin = require('clean-webpack-plugin'),
-  SRC_DIR = resolve(__dirname, 'src'),
-  BUILD_DIR = resolve(__dirname, 'build'),
-  NODE_MODULES = resolve(__dirname, 'node_modules');
+const { resolve } = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const SRC_DIR = resolve(__dirname, 'src');
+const BUILD_DIR = resolve(__dirname, 'build');
+const NODE_MODULES = resolve(__dirname, 'node_modules');
 
 module.exports = {
   context: SRC_DIR,
