@@ -8,11 +8,12 @@ import createBrowserHistory from 'history/createBrowserHistory';
 /*
  * Container imports
  */
-import Project from 'containers/Project';
-import Chat from 'containers/Chat';
-import Backlog from 'containers/Backlog';
-import Calendar from 'containers/Calendar';
-import Board from 'containers/Board';
+import ProjectPage from 'containers/views/Project';
+import ChatPage from 'containers/views/Chat';
+import BacklogPage from 'containers/views/Backlog';
+import CalendarPage from 'containers/views/Calendar';
+import BoardPage from 'containers/views/Board';
+import RetroPage from 'containers/views/Retro';
 
 /*
  * Component imports
@@ -20,20 +21,29 @@ import Board from 'containers/Board';
 import Menu from 'components/Menu/Menu';
 
 /*
+ * Common styles and theme
+ */
+import 'styles/base.scss';
+
+/*
  * Router history to be passed to children
  */
 const history = createBrowserHistory();
 
+/*
+* App components defines application routes
+*/
 const App = () => (
   <Router history={history}>
     <div>
       <Menu />
       <Switch>
-        <Route exact path="/" component={Project} />
-        <Route path="/chat" component={Chat} />
-        <Route path="/backlog" component={Backlog} />
-        <Route path="/calendar" component={Calendar} />
-        <Route path="/board" component={Board} />
+        <Route exact path="/" component={ProjectPage} />
+        <Route exact path="/chat" component={ChatPage} />
+        <Route exact path="/backlog" component={BacklogPage} />
+        <Route exact path="/calendar" component={CalendarPage} />
+        <Route exact path="/board" component={BoardPage} />
+        <Route exact path="/retro" component={RetroPage} />
         <Route render={() => <h1>PAGE NOT FOUND!</h1>} />
       </Switch>
     </div>

@@ -1,17 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Calendar extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <div>
-        <h1>Calendar</h1>
+        <h1>Calendar Page</h1>
       </div>
     );
   }
 }
+
+Calendar.propTypes = {};
 
 export default Calendar;

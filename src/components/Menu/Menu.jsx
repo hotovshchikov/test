@@ -1,36 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './Menu.scss';
+import './styles.scss';
 
-class Menu extends React.Component {
-  constructor() {
-    super();
-  }
-
-  render() {
-    return (
-      <div>
-        <ul className="menu">
-          <li className="menu__item">
-            <Link className="menu__link" to="/">Project</Link>
-          </li>
-          <li className="menu__item">
-            <Link className="menu__link" to="/calendar">Calendar</Link>
-          </li>
-          <li className="menu__item">
-            <Link className="menu__link" to="/chat">Chat</Link>
-          </li>
-          <li className="menu__item">
-            <Link className="menu__link" to="/table">Table</Link>
-          </li>
-          <li className="menu__item">
-            <Link className="menu__link" to="/backlog">Backlog</Link>
-          </li>
-        </ul>
-      </div>
-    );
-  }
-}
+const Menu = props => (
+  <div>
+    <ul className="menu">
+      <li className="menu__item">
+        <Link className="menu__link" to="/">Project</Link>
+      </li>
+      <li className="menu__item">
+        <Link className="menu__link" to="/chat">Chat</Link>
+      </li>
+      <li className="menu__item">
+        <Link className="menu__link" to="/backlog">Backlog</Link>
+      </li>
+      <li className="menu__item">
+        <Link className="menu__link" to="/calendar">Calendar</Link>
+      </li>
+      <li className="menu__item">
+        <Link className="menu__link" to="/board">Board</Link>
+      </li>
+      <li className="menu__item">
+        <Link className="menu__link" to="/retro">Retro</Link>
+      </li>
+    </ul>
+  </div>
+);
 
 export default Menu;
