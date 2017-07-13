@@ -1,1 +1,1 @@
-Webpack Boilerplate
+Scrumi project Webpack boilerplate
