@@ -1,0 +1,31 @@
+.open_sticker__user_inf {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0 0;
+  font-size: 14px;
+
+  & li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+  }
+
+  & li p {
+    margin: 0;
+    font-size: 14px;
+    color: #808080;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.user_avatar {
+  margin-bottom: -6px;
+  width: 24px;
+  height: 24px;
+}
+
+.user_inf__user_name {
+  margin: 0;
+  text-decoration: none;
+  color: #3189d6;
+  font-family: 'Roboto', sans-serif;
+}

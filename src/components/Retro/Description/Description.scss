@@ -1,0 +1,17 @@
+.container_open_sticker {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.open_sticker {
+  position: relative;
+  width: 810px;
+  background-color: #fafafa;
+  border-radius: 5px 5px 5px 5px;
+  padding: 27px 35px;
+  box-sizing: border-box;
+}

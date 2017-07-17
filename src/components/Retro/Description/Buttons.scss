@@ -1,0 +1,13 @@
+.open_sticker__buttons {
+  margin: 0;
+  padding: 25px 0 0 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 40px;
+  }
+}

@@ -28,6 +28,7 @@ import 'styles/base.scss';
 /*
  * Router history to be passed to children
  */
+
 const history = createBrowserHistory();
 
 /*

@@ -1,4 +1,5 @@
 import React from 'react';
+import Description from "../../components/Retro/Description/Description";
 
 class Retro extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class Retro extends React.Component {
     return (
       <div>
         <h1>Retro page</h1>
+        <Description />
       </div>
     );
   }
